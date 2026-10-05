@@ -34,8 +34,7 @@ class Ship:
             for column in range(min(start_column, end_column),
                                 max(start_column, end_column) + 1):
                 if not (0 <= row < 10 and 0 <= column < 10):
-                    raise ValueError("Ship coordinates must be within the field.")
-
+                    raise ValueError("Ship coordinates must be in the field.")
                 self.decks.append(
                     Deck(row, column, is_alive=not is_drowned)
                 )
